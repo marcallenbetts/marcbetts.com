@@ -27,8 +27,15 @@
 
       gtag("config", "UA-6587012-1");
     </script>
+    <script>
+      setCopyright = () => {
+        const date = new Date();
+        copyright = document.getElementById("copyright");
+        copyright.textContent = `Witty tagline coming soon. Copyright ${date.getFullYear()}.`;
+      };
+    </script>
   </head>
-  <body class="tk-proxima-nova">
+  <body class="tk-proxima-nova" onload="setCopyright()">
     <div class="wrapper">
       <div class="hero">
         <div
@@ -85,7 +92,7 @@
         </div>
       </div>
 
-      <p class="hi5">Witty tagline coming soon. Copyright 2022.</p>
+      <p class="hi5" id="copyright"></p>
 
       <div>
         <br />
